@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--<meta charset="UTF-8">-->
+<title>Employee Manager</title>
+<link rel="stylesheet" href="exp2.css">
+</head>
+<body>
+
+<h2>Employee Management System</h2>
+
+<div class="form">
+<input type="text" id="name" placeholder="Employee Name"><br>
+<input type="text" id="empid" placeholder="Employee ID"><br>
+<input type="text" id="branch" placeholder="Branch"><br>
+<input type="number" id="salary" placeholder="Salary"><br>
+
+<button onclick="addEmployee()">Add Employee</button>
+</div>
+
+<div class="buttons">
+<button onclick="netsalary()">Net Salary</button>
+<button onclick="salaryabove50()">Salary > 50000</button>
+<button onclick="averagesalary()">Average Salary</button>
+<button onclick="countdepartment()">Count by Department</button>
+</div>
+
+<h3 id="result"></h3>
+
+<table id="emptable"  >
+<thead>
+<tr>
+<th>Name</th>
+<th>ID</th>
+<th>Branch</th>
+<th>Salary</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+</table>
+
+<script src="exp2.js"></script>
+</body>
+</html>
