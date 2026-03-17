@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DOM Practice</title>
+    <meta charset="utf-8">
+    <title>dom practice</title>
     <style>
         body {
             text-align: center;
@@ -16,46 +16,41 @@
 </head>
 <body>
 
-    <h1 id="heading">welcome to java script </h1>
-    <p id="para">hello, here is output</p>
+    <h1 id="heading">welcome to javascript</h1>
+    <p id="para">this is a paragraph</p>
 
-    <input type="text" id="inputText" placeholder="Enter heading text">
+    <input type="text" id="inputtext" placeholder="enter heading text">
 
     <br><br>
 
-    <button onclick="changecolor()">Change Background Colour</button>
-    <button onclick="changeheading()">Change Heading</button>
-    <button onclick="incfont()">Increase Font</button>
-    <button onclick="hidepara()">Show/Hide Paragraph</button>
-
-
-
-
-
+    <button onclick="changecolor()">change bg color</button>
+    <button onclick="changeheading()">change heading</button>
+    <button onclick="increasefont()">increase font</button>
+    <button onclick="togglepara()">show/hide paragraph</button>
 
     <script>
-        let color = ["red", "", "green", "yellow", "pink", "orange"];
+        let colors = ["red", "blue", "green", "yellow", "pink", "orange"];
         let index = 0;
 
         function changecolor() {
-            document.body.style.backgroundColor = color[index];
-            index = (index + 1) % color.length;
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
         }
 
         function changeheading() {
-            let input = document.getelementbyid("inputText").value;
-            document.getelementbyid("heading").innerText = input;
+            let input = document.getElementById("inputtext").value;
+            document.getElementById("heading").innerText = input;
         }
 
         function increasefont() {
-            let h1 = document.getelementbyid("heading");
-            let size = window.getcomputedstyle(h1).fontSize;
+            let h1 = document.getElementById("heading");
+            let size = window.getComputedStyle(h1).fontSize;
             size = parseInt(size);
             h1.style.fontSize = (size + 5) + "px";
         }
 
-        function hidepara() {
-            let para = document.getelementbyid("para");
+        function togglepara() {
+            let para = document.getElementById("para");
             if (para.style.display === "none") {
                 para.style.display = "block";
             } else {

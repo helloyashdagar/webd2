@@ -1,6 +1,6 @@
 let employees = [];
 
-// Add Employee (NO table update here)
+
 function addEmployee(){
 
     let name = document.getElementById("name").value.trim();
