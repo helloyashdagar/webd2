@@ -2,21 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>experiment-06</title>
+    <title>DOM Practice</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2>welcome to javascript lab</h2>
-        <input type="text" placeholder="enter new heading text">
-        <button id="" onclick=""></button>
-        <button id=""></button>
-        <button id="" onclick="">change text</button>
-        <button id="" onclick="">change background</button>
-        <button id="" onclick=""></button>
-        <button  id="" onclick=""></button>
 
-    </div>
-    
+    <h1 id="heading">welcome to java script </h1>
+    <p id="para">hello, here is output</p>
+
+    <input type="text" id="inputText" placeholder="Enter heading text">
+
+    <br><br>
+
+    <button onclick="changecolor()">Change Background Colour</button>
+    <button onclick="changeheading()">Change Heading</button>
+    <button onclick="incfont()">Increase Font</button>
+    <button onclick="hidepara()">Show/Hide Paragraph</button>
+
+
+
+
+
+
+    <script>
+        let color = ["red", "", "green", "yellow", "pink", "orange"];
+        let index = 0;
+
+        function changecolor() {
+            document.body.style.backgroundColor = color[index];
+            index = (index + 1) % color.length;
+        }
+
+        function changeheading() {
+            let input = document.getelementbyid("inputText").value;
+            document.getelementbyid("heading").innerText = input;
+        }
+
+        function increasefont() {
+            let h1 = document.getelementbyid("heading");
+            let size = window.getcomputedstyle(h1).fontSize;
+            size = parseInt(size);
+            h1.style.fontSize = (size + 5) + "px";
+        }
+
+        function hidepara() {
+            let para = document.getelementbyid("para");
+            if (para.style.display === "none") {
+                para.style.display = "block";
+            } else {
+                para.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
