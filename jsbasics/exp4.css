@@ -1,78 +1,50 @@
-
 body {
-    font-family:  sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font: 16px/1.5 sans-serif;
+    background: LightGray;
     margin: 0;
+    padding: 40px 20px;
 }
 
-
 .container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+    background: White;
+    padding: 30px;
+    margin: auto;
+    max-width: 360px;
+    border: 1px solid Silver;
+    border-radius: 4px;
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 1.5rem;
+    color: Black;
 }
 
 
-label {
-    font-weight: 600;
-    color: #555;
-    display: block;
-    margin-bottom: 8px;
-}
-
-input[type="number"] {
-    width: 80%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-input[type="number"]:focus {
-    border-color: #4a90e2;
-}
-
-
+#info {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        padding: 15px;
+        border: 1px solid black;
+        background-color: white;
+        text-align: left;
+    }
 button {
-    background-color: #4a90e2;
-    color: white;
-    padding: 12px 24px;
+    background: blue;
+    color: White;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    /*transition: background 0.3s ease;*/
+    padding: 10px 20px;
     width: 100%;
-    margin-top: 10px;
+    font-weight: bold;
+    
 }
 
-button:hover {
-    background-color: #357abd;
-}
+
 
 
 #result {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #4a90e2;
-    text-align: left;
-    line-height: 1.6;
-    font-weight: 500;
-    color: #444;
+    padding: 10px;
+    border: 1px dashed gray;
+    background: Snow;
+    color: Black;
 }

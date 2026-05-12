@@ -3,61 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>dom practice</title>
-    <style>
-        body {
-            text-align: center;
-            margin-top: 50px;
-        }
-        button {
-            margin: 5px;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="exp6.css">
 </head>
+
 <body>
 
-    <h1 id="heading">welcome to javascript</h1>
-    <p id="para">this is a paragraph</p>
+    <div class="main-container">
+        <h1 id="heading">welcome to javascript</h1>
+        <p id="para">this is a paragraph</p>
 
-    <input type="text" id="inputtext" placeholder="enter heading text">
+        <input type="text" id="inputtext" placeholder="enter heading text">
 
-    <br><br>
+        <br><br>
 
-    <button onclick="changecolor()">change bg color</button>
-    <button onclick="changeheading()">change heading</button>
-    <button onclick="increasefont()">increase font</button>
-    <button onclick="togglepara()">show/hide paragraph</button>
+        <button onclick="changecolor()">change bg color</button>
+        <button onclick="changeheading()">change heading</button>
+        <button onclick="increasefont()">increase font</button>
+        <button onclick="togglepara()">show/hide paragraph</button>
+    </div>
 
-    <script>
-        let colors = ["red", "blue", "green", "yellow", "pink", "orange"];
-        let index = 0;
+    <div id="info">
+        Name: Yash dagar <br>
+        Roll No: 2503201001342
+    </div>
 
-        function changecolor() {
-            document.body.style.backgroundColor = colors[index];
-            index = (index + 1) % colors.length;
-        }
-
-        function changeheading() {
-            let input = document.getElementById("inputtext").value;
-            document.getElementById("heading").innerText = input;
-        }
-
-        function increasefont() {
-            let h1 = document.getElementById("heading");
-            let size = window.getComputedStyle(h1).fontSize;
-            size = parseInt(size);
-            h1.style.fontSize = (size + 5) + "px";
-        }
-
-        function togglepara() {
-            let para = document.getElementById("para");
-            if (para.style.display === "none") {
-                para.style.display = "block";
-            } else {
-                para.style.display = "none";
-            }
-        }
-    </script>
+    <script src="exp6.js"></script>
 
 </body>
 </html>
