@@ -1,0 +1,128 @@
+import React from 'react';
+
+export default function App() {
+  // Main background wrapper for the entire page
+  const pageStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    backgroundColor: "#f5f5f5",
+    fontFamily: "Arial, sans-serif",
+    padding: "20px"
+  };
+
+  // The main outer frame matching your image background layout
+  const showcaseContainerStyle = {
+    backgroundColor: "#f4f1de", // Pale yellowish-beige background color
+    border: "1px solid #c8c6a7",
+    borderRadius: "12px",
+    padding: "40px",
+    width: "100%",
+    maxWidth: "800px",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+    boxSizing: "border-box"
+  };
+
+  // Main title styling
+  const mainHeadingStyle = {
+    textAlign: "center",
+    color: "#8b4513", // Reddish-brown title color
+    fontSize: "28px",
+    fontWeight: "normal",
+    marginTop: "0px",
+    marginBottom: "35px"
+  };
+
+  // Flexbox layout mapping out the 3 cards exactly as shown
+  const flexGridStyle = {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "20px 25px"
+  };
+
+  // Standard shared rule definitions across all cards
+  const cardBaseStyle = {
+    borderRadius: "10px",
+    padding: "20px",
+    width: "230px",
+    textAlign: "center", // Card headers/text are centered in your image
+    boxSizing: "border-box"
+  };
+
+  // Product 1 Design
+  const card1Style = {
+    ...cardBaseStyle,
+    backgroundColor: "#aec6cf", // Soft blue
+    border: "2px solid #5b84b1"
+  };
+
+  // Product 2 Design
+  const card2Style = {
+    ...cardBaseStyle,
+    backgroundColor: "#90e0ef", // Clean bright green/teal tint
+    backgroundColor: "#83dc74", // Soft green matching image
+    border: "2px solid #4ca64c"
+  };
+
+  // Product 3 Design
+  const card3Style = {
+    ...cardBaseStyle,
+    backgroundColor: "#fbc4cb", // Soft pinkish-red
+    border: "2px solid #e07a5f"
+  };
+
+  // Common typography styles inside the cards
+  const titleStyle = {
+    margin: "0 0 12px 0",
+    fontSize: "20px",
+    fontWeight: "normal"
+  };
+
+  const textLineStyle = {
+    color: "#ffffff", // White text lines inside the cards
+    fontSize: "13px",
+    margin: "4px 0",
+    textAlign: "left",
+    paddingLeft: "10px"
+  };
+
+  return (
+    <div style={pageStyle}>
+      <div style={showcaseContainerStyle}>
+        
+        {/* Application Title */}
+        <h1 style={mainHeadingStyle}>Product Showcase</h1>
+
+        {/* Flexbox Row Container */}
+        <div style={flexGridStyle}>
+          
+          {/* Card 1: Wireless Mouse */}
+          <div style={card1Style}>
+            <h2 style={{ ...titleStyle, color: "#1d3557" }}>Wireless Mouse</h2>
+            <p style={textLineStyle}><b>Price:</b> ₹799</p>
+            <p style={textLineStyle}><b>Category:</b> Electronics</p>
+          </div>
+
+          {/* Card 2: Running Shoes */}
+          <div style={card2Style}>
+            <h2 style={{ ...titleStyle, color: "#1e4620" }}>Running Shoes</h2>
+            <p style={textLineStyle}><b>Price:</b> ₹2499</p>
+            <p style={textLineStyle}><b>Category:</b> Footwear</p>
+          </div>
+
+          {/* Card 3: Smart Watch */}
+          <div style={card3Style}>
+            <h2 style={{ ...titleStyle, color: "#7209b7" }}>Smart Watch</h2>
+            <p style={textLineStyle}><b>Price:</b> ₹3999</p>
+            <p style={textLineStyle}><b>Category:</b> Gadgets</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  );
+}
