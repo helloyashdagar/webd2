@@ -5,6 +5,11 @@ function App() {
     return (
         <div>
             <Counter />
+            <div className="student-info">
+  <p><strong>Name:</strong> yash dagar</p>
+  <p><strong>Roll No:</strong> 2503201001342</p>
+  <p><strong>Class:</strong> CSE-26</p>
+</div>
         </div>
     );
 }
